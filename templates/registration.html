@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+        <script src = "{% static 'js/quiz.js' %}"></script>
+    </head>
+<body>
+    <center>
+        <div>
+            <div class="login">
+              <h1>Register</h1>
+              <form method="post" action="/login/" onsubmit="Message()">
+              {% csrf_token %}
+                <p><input type="text" id="login" value="" placeholder="Username or Email" required></p>
+                <p><input type="password" name="password" value="" placeholder="Password" required></p>
+                <p class="submit"><input type="submit" name="commit" value="Register"></p>
+                <a href="username.html">Already Registered?....Click here to Login</a>
+              </form>
+            </div>
+          </div>
+    </center>
+</body>
+</html>
